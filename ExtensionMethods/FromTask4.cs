@@ -1,5 +1,11 @@
 ﻿using System;
 using System.Text;
+using System.Text.Json;
+
+
+
+Console.WriteLine(new Person(23, "Hello").SerializeToJson());
+Console.ReadKey();
 
 public static class SecondExtentionClass
 {
@@ -67,6 +73,10 @@ public static class SecondExtentionClass
             i++;
         }
         return stringBuilder.ToString();
+    }
+    public static string SerializeToJson<T>(this T obj)
+    {
+        return JsonSerializer.Serialize<T>(obj, new JsonSerializerOptions() { WriteIndented = true });
     }
 }
 

@@ -4,11 +4,25 @@ using System.Text;
 
 public class Person
 {
-    public Person(int a)
+    public Person(int a,string n)
     {
         age = a;
+        name = n;
     }
     private int age;
+    private string name;
+
+    public string Name
+    {
+        get
+        {
+            return name;
+        }
+        set
+        {
+            name = value;
+        }
+    }
     public int Age
     {
         get
