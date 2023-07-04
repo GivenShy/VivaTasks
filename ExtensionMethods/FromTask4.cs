@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 public static class SecondExtentionClass
 {
@@ -40,4 +41,33 @@ public static class SecondExtentionClass
         return true;
 
     }
+
+    public static string MyTrim(this string str)
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        int i = 0;
+        for(; i < str.Length; i++)
+        {
+            if (str[i]!=' ')
+            {
+                break;
+            }
+        }
+        int j = str.Length - 1;
+        for (; j >= 0; j--)
+        {
+            if (str[j]!=' ')
+            {
+                break;
+            }
+        }
+        while (i <= j)
+        {
+            stringBuilder.Append(str[i]);
+            i++;
+        }
+        return stringBuilder.ToString();
+    }
 }
+
+
