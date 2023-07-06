@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Text;
 public enum Color
 {
     Red, Yellow, White
@@ -31,13 +31,10 @@ public static class ThirdExtensionClass
         return enu;
     }
 
-    public static IEnumerable<T> filter<T>(this IEnumerable<T> values, bool condition, Func<T, bool> predicate)
+    public static IEnumerable<T> filter<T>(this IEnumerable<T> values, Func<T, bool> predicate)
     {
-        if (condition)
-        {
-            return values.Where(predicate);
-        }
-        return values;
+
+        return values.Where(predicate);
     }
 
     public static double CalculateTotalDuration(this IEnumerable<CallRecords> calls)
@@ -58,4 +55,26 @@ public static class ThirdExtensionClass
     {
         return messages.Where<SMS>(arg => { return arg.sender.Equals(sender); });
     }
+
+    public static string formatNumber(this string number) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.Append("(+374)");
+        stringBuilder.Append("-");
+        stringBuilder.Append(number[3]);
+        stringBuilder.Append(number[4]);
+        int index = 5;
+        for(int i = 0; i <2;i++)
+        {
+            stringBuilder.Append("-");
+            for (int j = 0; j < 3; j++)
+            {
+                stringBuilder.Append(number[index++]);
+            }
+        }
+
+        return stringBuilder.ToString();
+
+    }
+
 }
