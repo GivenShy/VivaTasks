@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.Json;
 
+
 public static class SecondExtentionClass
 {
     public static bool IsValidEmail(this string str)

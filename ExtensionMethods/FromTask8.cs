@@ -26,10 +26,13 @@ public class DataUsage
     public double dataInMB { get; set; }
 
 }
-public class CallRecords
+public class CallRecord
 {
     public DateTime startTime { get; set; }
     public DateTime endTime { get; set; }
+
+    public int MCC { get; set; }
+    public int MNC { get; set; }
 }
 public static class ThirdExtensionClass
 {
@@ -51,12 +54,12 @@ public static class ThirdExtensionClass
         return values.Where(predicate);
     }
 
-    public static double CalculateTotalDuration(this IEnumerable<CallRecords> calls,DateTime start, DateTime end)
+    public static double CalculateTotalDuration(this IEnumerable<CallRecord> calls,DateTime start, DateTime end)
     {
         DateTime zero = new DateTime(1970, 1, 1);
         double totalDuration = 0;
 
-        foreach (CallRecords call in calls)
+        foreach (CallRecord call in calls)
         {
             TimeSpan time1;
             TimeSpan time2;
@@ -133,10 +136,10 @@ public static class ThirdExtensionClass
         return cost;
     }
 
-    public static double calculateTheBill(this IEnumerable<CallRecords> calls,double plan)
+    public static double calculateTheBill(this IEnumerable<CallRecord> calls,double plan)
     {
         double cost = 0;
-        foreach(CallRecords call in calls)
+        foreach(CallRecord call in calls)
         {
             cost += (call.endTime - call.startTime).TotalMinutes * plan;
         }
@@ -157,6 +160,17 @@ public static class ThirdExtensionClass
             }
         }
         return sumOfSpeeds / counter;
+    }
+
+   public static IEnumerable<CallRecord> findRoamings(this IEnumerable<CallRecord> callRecords,int oper)
+    {
+        foreach(CallRecord call in callRecords)
+        {
+            if (call.MCC != oper)
+            {
+                yield return call;
+            }
+        }
     }
 
 }
