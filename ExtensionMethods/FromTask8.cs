@@ -7,6 +7,23 @@ public enum Color
     Red, Yellow, White
 }
 
+public class GeoLocation
+{
+    public GeoLocation(double x, double y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    public double X { get; set; }
+    public double Y { get; set; }
+}
+
+public class CellTower
+{
+    public GeoLocation geoLocation { get; set; }
+}
+
 public class TarifPlan
 {
     public TarifPlan(string name, int price, int callMinutes, int mB)
@@ -208,6 +225,20 @@ public static class ThirdExtensionClass
         return t;
     }
 
-    
+    public static CellTower closestCellTower(this GeoLocation myLocation,IEnumerable<CellTower> cellTowers)
+    {
+        CellTower cellTower = cellTowers.First();
+        double minDistance = double.MaxValue;
+        foreach(CellTower tower in cellTowers)
+        {
+            double dist = Math.Sqrt(Math.Pow(tower.geoLocation.X - myLocation.X, 2) + Math.Pow(tower.geoLocation.Y - myLocation.Y, 2));
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                cellTower = tower;
+            }
+        }
+        return cellTower;
+    }
 
 }
