@@ -4,6 +4,12 @@ public enum Color
 {
     Red, Yellow, White
 }
+public class NetworkSpeed
+{
+    public double Speed { get; set; }
+
+    public DateTime date { get; set; }
+}
 public class SMS
 {
     public SMS(string name)
@@ -135,6 +141,22 @@ public static class ThirdExtensionClass
             cost += (call.endTime - call.startTime).TotalMinutes * plan;
         }
         return cost;
+    }
+
+    public static double avarageSpeed(this IEnumerable<NetworkSpeed> networkSpeeds,DateTime start, DateTime end)
+    {
+        double sumOfSpeeds = 0;
+        double counter = 0;
+
+        foreach(NetworkSpeed speed in networkSpeeds)
+        {
+            if(speed.date>start && speed.date < end)
+            {
+                sumOfSpeeds += speed.Speed;
+                counter++;
+            }
+        }
+        return sumOfSpeeds / counter;
     }
 
 }
