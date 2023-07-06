@@ -4,7 +4,14 @@ public enum Color
 {
     Red, Yellow, White
 }
-
+public class SMS
+{
+    public SMS(string name)
+    {
+        sender = name;
+    }
+    public string sender { get; set; }
+}
 public class CallRecords
 {
     public DateTime startTime { get; set; }
@@ -17,13 +24,14 @@ public static class ThirdExtensionClass
         return File.Exists(str);
     }
 
-    public static T toEnum<T>(this string str) where T:struct{
+    public static T toEnum<T>(this string str) where T : struct
+    {
         T enu;
         Enum.TryParse<T>(str, true, out enu);
         return enu;
     }
 
-    public static IEnumerable<T> filter<T>(this IEnumerable<T> values,bool condition,Func<T,bool> predicate)
+    public static IEnumerable<T> filter<T>(this IEnumerable<T> values, bool condition, Func<T, bool> predicate)
     {
         if (condition)
         {
@@ -37,7 +45,7 @@ public static class ThirdExtensionClass
         DateTime zero = new DateTime(1970, 1, 1);
         double totalDuration = 0;
 
-        foreach(CallRecords call in calls)
+        foreach (CallRecords call in calls)
         {
             TimeSpan time1 = call.startTime.Subtract(zero);
             TimeSpan time2 = call.endTime.Subtract(zero);
@@ -46,4 +54,8 @@ public static class ThirdExtensionClass
         return totalDuration;
     }
 
+    public static IEnumerable<SMS> filterSMSBySender(this IEnumerable<SMS> messages, string sender)
+    {
+        return messages.Where<SMS>(arg => { return arg.sender.Equals(sender); });
+    }
 }
