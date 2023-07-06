@@ -18,6 +18,7 @@ public class DataUsage
     public DateTime date { get; set; }
 
     public double dataInMB { get; set; }
+
 }
 public class CallRecords
 {
@@ -117,5 +118,23 @@ public static class ThirdExtensionClass
         return totalData;
     }
 
+    public static double calculateTheBill(this IEnumerable<DataUsage> usages,double plan) {
+        double cost = 0;
+        foreach(DataUsage data in usages)
+        {
+            cost += data.dataInMB * plan;
+        }
+        return cost;
+    }
+
+    public static double calculateTheBill(this IEnumerable<CallRecords> calls,double plan)
+    {
+        double cost = 0;
+        foreach(CallRecords call in calls)
+        {
+            cost += (call.endTime - call.startTime).TotalMinutes * plan;
+        }
+        return cost;
+    }
 
 }
