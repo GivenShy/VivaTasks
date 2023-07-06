@@ -1,8 +1,26 @@
 ﻿using System;
 using System.Text;
+using System.Linq;
+
 public enum Color
 {
     Red, Yellow, White
+}
+
+public class TarifPlan
+{
+    public TarifPlan(string name, int price, int callMinutes, int mB)
+    {
+        Name = name;
+        Price = price;
+        this.callMinutes = callMinutes;
+        MB = mB;
+    }
+
+    public string Name { get; set; }
+    public int Price { get; set; }
+    public int callMinutes { get; set; }
+    public int MB { get; set; }
 }
 public class NetworkSpeed
 {
@@ -172,5 +190,24 @@ public static class ThirdExtensionClass
             }
         }
     }
+
+    public static TarifPlan recommend(this IEnumerable<CallRecord> callRecords, IEnumerable<DataUsage> dataUsages, List<TarifPlan> tarifs) {
+        IEnumerable<TarifPlan> tarifPlans = tarifs.OrderBy<TarifPlan, int>(t => t.Price);
+        double minutes = callRecords.CalculateTotalDuration(DateTime.MinValue,DateTime.MaxValue)/60000;
+        double MB = dataUsages.dataUsage(DateTime.MinValue, DateTime.MaxValue);
+        TarifPlan t = tarifPlans.First();
+        foreach(TarifPlan tarif in tarifs)
+        {
+            if(tarif.callMinutes>minutes && tarif.MB > MB)
+            {
+                return tarif;
+                t = tarif;
+            }
+        }
+
+        return t;
+    }
+
+    
 
 }
