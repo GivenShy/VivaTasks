@@ -12,6 +12,13 @@ public class SMS
     }
     public string sender { get; set; }
 }
+
+public class DataUsage
+{
+    public DateTime date { get; set; }
+
+    public double dataInMB { get; set; }
+}
 public class CallRecords
 {
     public DateTime startTime { get; set; }
@@ -37,16 +44,36 @@ public static class ThirdExtensionClass
         return values.Where(predicate);
     }
 
-    public static double CalculateTotalDuration(this IEnumerable<CallRecords> calls)
+    public static double CalculateTotalDuration(this IEnumerable<CallRecords> calls,DateTime start, DateTime end)
     {
         DateTime zero = new DateTime(1970, 1, 1);
         double totalDuration = 0;
 
         foreach (CallRecords call in calls)
         {
-            TimeSpan time1 = call.startTime.Subtract(zero);
-            TimeSpan time2 = call.endTime.Subtract(zero);
-            totalDuration += time2.TotalMilliseconds - time2.TotalMilliseconds;
+            TimeSpan time1;
+            TimeSpan time2;
+            if (call.startTime >= end)
+                continue;
+            if (call.startTime >= start)
+            {
+                time1 = call.startTime.Subtract(zero);
+                if (call.endTime < end)
+                    time2 = call.endTime.Subtract(zero);
+                else
+                    time2 = end.Subtract(zero);
+                totalDuration += time2.TotalMilliseconds - time2.TotalMilliseconds;
+
+            }
+            else
+            {
+                time1 = start.Subtract(zero);
+                if (call.endTime < end)
+                    time2 = call.endTime.Subtract(zero);
+                else
+                    time2 = end.Subtract(zero);
+                totalDuration += time2.TotalMilliseconds - time2.TotalMilliseconds;
+            }
         }
         return totalDuration;
     }
@@ -76,5 +103,19 @@ public static class ThirdExtensionClass
         return stringBuilder.ToString();
 
     }
+
+    public static double dataUsage(this IEnumerable<DataUsage> usages, DateTime startDate, DateTime endDate)
+    {
+        double totalData = 0;
+        foreach(DataUsage data in usages)
+        {
+            if(data.date >=startDate && data.date <= endDate)
+            {
+                totalData += data.dataInMB;
+            }
+        }
+        return totalData;
+    }
+
 
 }
