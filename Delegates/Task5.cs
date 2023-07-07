@@ -3,7 +3,7 @@ namespace Delegates
 {
     public class Balance
     {
-        public delegate void BalanceHandler(Client client);
+        public delegate void BalanceHandler(Object source, Client client);
 
         public event BalanceHandler BalanceRefillEvent;
 
@@ -16,11 +16,24 @@ namespace Delegates
             if (BalanceRefillEvent != null)
             {
                 Console.WriteLine("Added " + client.refilAmount + " for number " + client.phoneNumber);
-                BalanceRefillEvent(client);
+                BalanceRefillEvent(this, client);
             }
 
         }
 
+        public override string ToString()
+        {
+            return "Balance Manipulation ";
+        }
+    }
+
+    public class Logger
+    {
+        public void log(Object source, Client client)
+        {
+            Console.WriteLine(source.ToString() + "number: " + client.phoneNumber
+                + " amount: " + client.refilAmount);
+        }
     }
 
     public class Client : EventArgs

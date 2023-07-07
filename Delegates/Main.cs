@@ -41,8 +41,9 @@ namespace Delegates
             Client client = new Client();
             client.phoneNumber = 32423442;
             client.refilAmount = 1000;
-            balance.BalanceRefillEvent += (client) => Console.WriteLine("Refiled with desktop Application number "
-                + client.phoneNumber + " by " + client.refilAmount);
+            Logger logger = new Logger();
+            balance.BalanceRefillEvent += logger.log;
+
             balance.BalanceRefil(client);
             Console.ReadKey();
         }
