@@ -19,10 +19,8 @@ namespace delegates
         {
             Console.WriteLine(str);
         }
-        static void OtherPrint()
-        {
-            Console.WriteLine("HelloWorld");
-        }
+        
+        
     }
 
     public delegate void Print(string str);
