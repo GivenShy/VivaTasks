@@ -5,7 +5,7 @@ namespace Delegates
     {
         public delegate void BalanceHandler(Object source, Client client);
 
-        public event BalanceHandler BalanceRefillEvent;
+        public event BalanceHandler? BalanceRefillEvent;
 
         public Balance()
         {
@@ -31,6 +31,7 @@ namespace Delegates
     {
         public void log(Object source, Client client)
         {
+
             Console.WriteLine(source.ToString() + "number: " + client.phoneNumber
                 + " amount: " + client.refilAmount);
         }

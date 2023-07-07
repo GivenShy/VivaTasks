@@ -1,0 +1,15 @@
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/bin/Debug/net6.0/DateTimeAndString
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/bin/Debug/net6.0/DateTimeAndString.deps.json
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/bin/Debug/net6.0/DateTimeAndString.runtimeconfig.json
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/bin/Debug/net6.0/DateTimeAndString.dll
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/bin/Debug/net6.0/DateTimeAndString.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.csproj.AssemblyReference.cache
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.AssemblyInfoInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.AssemblyInfo.cs
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.csproj.CoreCompileInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.dll
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/refint/DateTimeAndString.dll
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/DateTimeAndString.genruntimeconfig.cache
+/Users/jivanshmavonyan/Desktop/Tasks/DateTimeAndString/obj/Debug/net6.0/ref/DateTimeAndString.dll
