@@ -26,16 +26,24 @@ namespace Delegates
 
             //Console.WriteLine(operationDelegate.Invoke(3, 4));
 
-            ComparisonDelegate comparison = (firstNumber, secondNumber) =>
-            {
-                if (firstNumber > secondNumber)
-                    return 1;
-                if (firstNumber == secondNumber)
-                    return 0;
-                return -1;
-            };
+            //ComparisonDelegate comparison = (firstNumber, secondNumber) =>
+            //{
+            //    if (firstNumber > secondNumber)
+            //        return 1;
+            //    if (firstNumber == secondNumber)
+            //        return 0;
+            //    return -1;
+            //};
 
-            Console.WriteLine(comparison(1, 3));
+            //Console.WriteLine(comparison(1, 3));
+
+            Balance balance = new Balance();
+            Client client = new Client();
+            client.phoneNumber = 32423442;
+            client.refilAmount = 1000;
+            balance.BalanceRefillEvent += (client) => Console.WriteLine("Refiled with desktop Application number "
+                + client.phoneNumber + " by " + client.refilAmount);
+            balance.BalanceRefil(client);
             Console.ReadKey();
         }
     }
