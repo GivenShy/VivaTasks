@@ -11,7 +11,7 @@ namespace DateTimeAndString
 
         public static void Main()
         {
-            Console.WriteLine(DateTime.Now.weekDay(Language.Rusian));
+            Ussd ussd = convertStringToUssd("*208*2000*1#");
             Console.ReadKey();
         }
 
@@ -64,6 +64,20 @@ namespace DateTimeAndString
             TimeSpan timeSpan = dateTime2 - dateTime1;
             double days = timeSpan.TotalDays;
             return Math.Abs(days);
+        }
+
+        public static Ussd convertStringToUssd(string str)
+        {
+            string s = str.Replace("#", "");
+            string[] strings = s.Split("*");
+            Ussd ussd = new Ussd();
+            ussd.Code = int.Parse(strings[1]);
+            ussd.Actions = new int[strings.Length - 2];
+            for (int i = 2; i <= ussd.Actions.Length + 1; i++)
+            {
+                ussd.Actions[i - 2] = int.Parse(strings[i]);
+            }
+            return ussd;
         }
     }
 }
