@@ -11,7 +11,7 @@ namespace DateTimeAndString
 
         public static void Main()
         {
-            Console.WriteLine(daysPassed(DateTime.Now, new DateTime(2022, 4, 15)));
+            Console.WriteLine(DateTime.Now.weekDay(Language.Rusian));
             Console.ReadKey();
         }
 
