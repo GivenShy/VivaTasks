@@ -11,7 +11,7 @@ namespace DateTimeAndString
 
         public static void Main()
         {
-            Console.WriteLine(daysPassed(new DateTime(2023, 4, 15), new DateTime(2022, 4, 15)));
+            Console.WriteLine(daysPassed(DateTime.Now, new DateTime(2022, 4, 15)));
             Console.ReadKey();
         }
 
