@@ -11,7 +11,7 @@ namespace DateTimeAndString
 
         public static void Main()
         {
-            Console.WriteLine(CurentTimeIn("Dzer sakagnayin planum nerarvats patetnery veraaktivacel en yev gortsum en minchev @expDate@. Patetneri mnacordy stugelu hamar ugharkeq *208#."));
+            Console.WriteLine(daysPassed(new DateTime(2023, 4, 15), new DateTime(2022, 4, 15)));
             Console.ReadKey();
         }
 
@@ -57,6 +57,13 @@ namespace DateTimeAndString
             dateTime = dateTime.AddMilliseconds(-1);
             string date = dateTime.ToString("dd/MM/yyyy HH:mm:ss.fff");
             return str.Replace("@expDate@", date);
+        }
+
+        public static double daysPassed(DateTime dateTime1, DateTime dateTime2)
+        {
+            TimeSpan timeSpan = dateTime2 - dateTime1;
+            double days = timeSpan.TotalDays;
+            return Math.Abs(days);
         }
     }
 }
