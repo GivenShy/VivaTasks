@@ -5,16 +5,13 @@ namespace DateTimeAndString
 {
     public class MainClass
     {
-        public static int thing;
-
         public MainClass()
         {
-
         }
 
         public static void Main()
         {
-            Console.WriteLine(getLastMilisecondOfTheMonth("Dzer sakagnayin planum nerarvats patetnery veraaktivacel en yev gortsum en minchev @expDate@. Patetneri mnacordy stugelu hamar ugharkeq *209#."));
+            Console.WriteLine(CurentTimeIn("Dzer sakagnayin planum nerarvats patetnery veraaktivacel en yev gortsum en minchev @expDate@. Patetneri mnacordy stugelu hamar ugharkeq *208#."));
             Console.ReadKey();
         }
 
@@ -50,22 +47,16 @@ namespace DateTimeAndString
 
         public static string CurentTimeIn(string str)
         {
-
-
-            string st = str.Replace("@expDate@", getDateMonthLater());
-            return st;
+            return str.Replace("@expDate@", getDateMonthLater());
         }
-
-        public static string getLastMilisecondOfTheMonth(string str)
+        public static string LastMilisecondInMonth(string str)
         {
-
-            DateTime currentTime = DateTime.Now;
-            DateTime dateTime = new DateTime(currentTime.Year, currentTime.Month, 1);
+            DateTime now = DateTime.Now;
+            DateTime dateTime = new DateTime(now.Year, now.Month, 1);
             dateTime = dateTime.AddMonths(1);
             dateTime = dateTime.AddMilliseconds(-1);
             string date = dateTime.ToString("dd/MM/yyyy HH:mm:ss.fff");
             return str.Replace("@expDate@", date);
-
         }
     }
 }
