@@ -5,13 +5,16 @@ namespace DateTimeAndString
 {
     public class MainClass
     {
+        public static int thing;
+
         public MainClass()
         {
+
         }
 
         public static void Main()
         {
-            Console.WriteLine(CurentTimeIn("Dzer sakagnayin planum nerarvats patetnery veraaktivacel en yev gortsum en minchev @expDate@. Patetneri mnacordy stugelu hamar ugharkeq *208#."));
+            Console.WriteLine(getLastMilisecondOfTheMonth("Dzer sakagnayin planum nerarvats patetnery veraaktivacel en yev gortsum en minchev @expDate@. Patetneri mnacordy stugelu hamar ugharkeq *209#."));
             Console.ReadKey();
         }
 
@@ -47,19 +50,22 @@ namespace DateTimeAndString
 
         public static string CurentTimeIn(string str)
         {
-            str += " ";
-            string[] strings = str.Split("@expDate@");
-            string date = getDateMonthLater();
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < strings.Length; i++)
-            {
-                stringBuilder.Append(strings[i] + " ");
-                if (i != strings.Length - 1)
-                {
-                    stringBuilder.Append(date);
-                }
-            }
-            return stringBuilder.ToString();
+
+
+            string st = str.Replace("@expDate@", getDateMonthLater());
+            return st;
+        }
+
+        public static string getLastMilisecondOfTheMonth(string str)
+        {
+
+            DateTime currentTime = DateTime.Now;
+            DateTime dateTime = new DateTime(currentTime.Year, currentTime.Month, 1);
+            dateTime = dateTime.AddMonths(1);
+            dateTime = dateTime.AddMilliseconds(-1);
+            string date = dateTime.ToString("dd/MM/yyyy HH:mm:ss.fff");
+            return str.Replace("@expDate@", date);
+
         }
     }
 }
