@@ -1,0 +1,30 @@
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/bin/Debug/net6.0/ExceptionHandling
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/bin/Debug/net6.0/ExceptionHandling.deps.json
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/bin/Debug/net6.0/ExceptionHandling.runtimeconfig.json
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/bin/Debug/net6.0/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/bin/Debug/net6.0/ExceptionHandling.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.csproj.AssemblyReference.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.AssemblyInfoInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.AssemblyInfo.cs
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.csproj.CoreCompileInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/refint/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ExceptionHandling.genruntimeconfig.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Exception Handling/obj/Debug/net6.0/ref/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/ExceptionHandling
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/ExceptionHandling.deps.json
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/ExceptionHandling.runtimeconfig.json
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/ExceptionHandling.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.csproj.AssemblyReference.cache
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.AssemblyInfoInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.AssemblyInfo.cs
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.csproj.CoreCompileInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/refint/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.genruntimeconfig.cache
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ref/ExceptionHandling.dll

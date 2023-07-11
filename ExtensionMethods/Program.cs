@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Text;
 
+List<Person> pers = new List<Person>
+{
+    new Person(2,"dfs"),
+    new Person(534,"sfdf"),
+    new Person(3,"ad")
+};
+List<Person> p = pers.SortByProperty(p => { return p.Name; });
+
+Console.ReadKey();
 
 public class Person
 {
-    public Person(int a,string n)
+    public Person(int a, string n)
     {
         age = a;
         name = n;
@@ -57,39 +66,39 @@ public static class ExtensionClass
         return st;
     }
 
-    public static List<T> SortByProperty<T>(this List<T> list, Func<T, IComparable> func)
+    public static List<T> SortByProperty<T, Tkey>(this List<T> list, Func<T, Tkey> func)
     {
         List<T> newList = new List<T>(list);
-        sortByQuickSort(newList, func, 0, newList.Count()-1);
+        //sortByQuickSort(newList, func, 0, newList.Count() - 1);
         return newList;
 
     }
 
-    private static void sortByQuickSort<T>(List<T> list, Func<T,IComparable> func,int left, int right)
+    private static void sortByQuickSort<T>(List<T> list, Func<T, IComparable> func, int left, int right)
     {
         if (left >= right)
         {
             return;
         }
         var i = left;
-        var j = right-1;
+        var j = right - 1;
         var pivot = list[right];
         T temp;
         while (i < j)
         {
-            while (i<=j && func(list[i]).CompareTo(func(pivot))<0)
+            while (i <= j && func(list[i]).CompareTo(func(pivot)) < 0)
             {
                 i++;
 
             }
 
-            while (j>left & i<right-1 && i<=j && func(list[j]).CompareTo(func(pivot)) > 0)
+            while (j > left & i < right - 1 && i <= j && func(list[j]).CompareTo(func(pivot)) > 0)
             {
                 j--;
             }
             if (i < j)
             {
-                
+
                 temp = list[i];
                 list[i] = list[j];
                 list[j] = temp;

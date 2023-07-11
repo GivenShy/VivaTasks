@@ -12,6 +12,7 @@ namespace DateTimeAndString
         public static void Main()
         {
             Ussd ussd = convertStringToUssd("*208*2000*1#");
+            Console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss.fff"));
             Console.ReadKey();
         }
 
