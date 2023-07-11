@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ExceptioHandling
+namespace ExceptionHandling
 {
     public class MainClass
     {
@@ -14,7 +14,18 @@ namespace ExceptioHandling
             //Console.ReadKey();
             //
             //---Task2
-            int age = ReadFromConsoleTheAge();
+            //int age = ReadFromConsoleTheAge();
+            //---Task3
+            Subscriber subscriber = new Subscriber();
+            subscriber.phoneNum = 55221819;
+            subscriber.balance = 3000;
+            subscriber.isInRoaming = false;
+            subscriber.isServiceActive = false;
+            subscriber.servicePrice = 1500;
+            subscriber.expirationDate = DateTime.Now.AddDays(12);
+            subscriber.activateTheService();
+            Console.ReadKey();
+
         }
 
         public static void writeToAnotherFile(string path1, string path2)

@@ -35,9 +35,36 @@ namespace ExceptionHandling
             {
                 throw new BalanceExcpetion("There is no enough money");
             }
+            activate();
 
         }
 
+        private void activate()
+        {
+            try
+            {
+                isServiceActive = true;
+                balance -= servicePrice;
+                expirationDate = expirationDate.AddDays(30);
+                Console.WriteLine($"The service is active until {expirationDate}");
+            }
+            catch (ServiceActivationException e)
+            {
+                Console.WriteLine("Unable to activate the service try later");
+            }
+            catch (BalanceExcpetion e)
+            {
+                isServiceActive = false;
+                Console.WriteLine("Unable to get the money");
+            }
+            catch (ExpirationDateException e)
+            {
+                isServiceActive = false;
+                balance += servicePrice;
+                Console.WriteLine("Something went wrong with dates");
+            }
+
+        }
 
     }
 }
