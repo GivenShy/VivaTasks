@@ -10,22 +10,33 @@ namespace ExceptionHandling
         {
             //----Task1
             //writeToAnotherFile("/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/text.txt", "");
-            //Console.WriteLine("Hello");
             //Console.ReadKey();
             //
             //---Task2
-            //int age = ReadFromConsoleTheAge();
+            //try
+            //{
+            //    int age = ReadTheAgeFromConsole();
+
+            //}
+            //catch (FormatException e)
+            //{
+            //    Console.WriteLine(e);
+            //}
+            //catch (ArgumentException e)
+            //{
+            //    Console.WriteLine(e);
+            //}
             //---Task3
             //---Task4
-            Subscriber subscriber = new Subscriber();
-            subscriber.phoneNum = 55221819;
-            subscriber.balance = 3000;
-            subscriber.isInRoaming = false;
-            subscriber.isServiceActive = false;
-            subscriber.servicePrice = 1500;
-            subscriber.expirationDate = DateTime.Now.AddDays(12);
-            subscriber.activateTheService();
-            Console.ReadKey();
+            //Subscriber subscriber = new Subscriber();
+            //subscriber.phoneNum = 55221819;
+            //subscriber.balance = 3000;
+            //subscriber.isInRoaming = false;
+            //subscriber.isServiceActive = false;
+            //subscriber.servicePrice = 1500;
+            //subscriber.expirationDate = DateTime.Now.AddDays(12);
+            //subscriber.activateTheService();
+            //Console.ReadKey();
 
         }
 
@@ -57,7 +68,7 @@ namespace ExceptionHandling
             }
 
         }
-        public static int ReadFromConsoleAge()
+        public static int ReadTheAgeFromConsole()
         {
             string s = Console.ReadLine();
             int age = 0;
