@@ -42,7 +42,7 @@ namespace ExceptionHandling
             {
                 Console.WriteLine($"There is no file {path1}");
             }
-            catch (ArgumentException)
+            catch (ArgumentException e)
             {
                 Console.WriteLine("The arguments are not valid");
             }
