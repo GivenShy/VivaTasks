@@ -16,7 +16,6 @@ namespace ExceptionHandling
             //try
             //{
             //    int age = ReadTheAgeFromConsole();
-
             //}
             //catch (FormatException e)
             //{
@@ -70,11 +69,11 @@ namespace ExceptionHandling
         }
         public static int ReadTheAgeFromConsole()
         {
-            string s = Console.ReadLine();
+            string? s = Console.ReadLine();
             int age = 0;
             try
             {
-                age = int.Parse(s);
+                age = int.Parse(s ?? throw new NullReferenceException());
 
             }
             catch (FormatException e)
