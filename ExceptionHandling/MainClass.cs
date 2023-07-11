@@ -29,12 +29,13 @@ namespace ExceptionHandling
 
         }
 
-        public static void writeToAnotherFile(string path1, string path2)
+        public static void WriteToAnotherFile(string path1, string path2)
         {
             string str = "";
             try
             {
                 str = File.ReadAllText(path1);
+                str = str.ToUpper();
                 File.WriteAllText(path2, str);
 
             }
@@ -42,13 +43,21 @@ namespace ExceptionHandling
             {
                 Console.WriteLine($"There is no file {path1}");
             }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             catch (ArgumentException e)
             {
                 Console.WriteLine("The arguments are not valid");
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
         }
-        public static int ReadFromConsoleTheAge()
+        public static int ReadFromConsoleAge()
         {
             string s = Console.ReadLine();
             int age = 0;
