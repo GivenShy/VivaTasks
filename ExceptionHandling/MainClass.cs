@@ -37,6 +37,24 @@ namespace ExceptionHandling
             //subscriber.activateTheService();
             //Console.ReadKey();
 
+            List<Subscriber> subscribers = new List<Subscriber>()
+            {
+                new Subscriber(1234,1000,false,DateTime.Now.AddDays(15),false,800),
+                new Subscriber(37829,1200,false,DateTime.Now.AddDays(15),true,800),
+                new Subscriber(73482,1000,true,DateTime.Now.AddDays(15),false,800),
+                new Subscriber(8372,1000,false,DateTime.Now.AddDays(15),false,800),
+                new Subscriber(897,300,false,DateTime.Now.AddDays(15),false,800),
+                new Subscriber(2839,1000,false,DateTime.Now.AddDays(15),false,800),
+            };
+            ActivationService activation = new ActivationService();
+            List<Subscriber> filter = activation.FilterList(subscribers);
+            activation.ActivateAll(filter);
+            foreach (Subscriber subscriber in filter)
+            {
+                Console.WriteLine(subscriber.phoneNum);
+            }
+
+            Console.ReadKey();
         }
 
         public static void WriteToAnotherFile(string path1, string path2)
@@ -86,6 +104,7 @@ namespace ExceptionHandling
             }
             return age;
         }
+
     }
 
 }

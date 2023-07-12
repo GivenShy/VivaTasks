@@ -7,6 +7,16 @@ namespace ExceptionHandling
         {
         }
 
+        public Subscriber(int phoneNum, int balance, bool isInRoaming, DateTime expirationDate, bool isServiceActive, int servicePrice)
+        {
+            this.phoneNum = phoneNum;
+            this.balance = balance;
+            this.isInRoaming = isInRoaming;
+            this.expirationDate = expirationDate;
+            this.isServiceActive = isServiceActive;
+            this.servicePrice = servicePrice;
+        }
+
         public int phoneNum { get; set; }
         public int balance { get; set; }
         public bool isInRoaming { get; set; }
@@ -14,7 +24,7 @@ namespace ExceptionHandling
         public bool isServiceActive { get; set; }
         public int servicePrice { get; set; }
 
-        public void activateTheService()
+        public void ActivateTheServiceCheck()
         {
 
             if (isInRoaming)
@@ -34,34 +44,6 @@ namespace ExceptionHandling
             if (balance < servicePrice)
             {
                 throw new BalanceExcpetion("There is no enough money");
-            }
-            activate();
-
-        }
-
-        private void activate()
-        {
-            try
-            {
-                isServiceActive = true;
-                balance -= servicePrice;
-                expirationDate = expirationDate.AddDays(30);
-                Console.WriteLine($"The service is active until {expirationDate}");
-            }
-            catch (ServiceActivationException e)
-            {
-                Console.WriteLine("Unable to activate the service try later");
-            }
-            catch (BalanceExcpetion e)
-            {
-                isServiceActive = false;
-                Console.WriteLine("Unable to get the money");
-            }
-            catch (ExpirationDateException e)
-            {
-                isServiceActive = false;
-                balance += servicePrice;
-                Console.WriteLine("Something went wrong with dates");
             }
 
         }
