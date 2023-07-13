@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/ExceptionHandling.csproj": {}
+    "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multitthreading.csproj": {}
   },
   "projects": {
-    "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/ExceptionHandling.csproj": {
+    "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multitthreading.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/ExceptionHandling.csproj",
-        "projectName": "ExceptionHandling",
-        "projectPath": "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/ExceptionHandling.csproj",
+        "projectUniqueName": "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multitthreading.csproj",
+        "projectName": "Multitthreading",
+        "projectPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multitthreading.csproj",
         "packagesPath": "/Users/jivanshmavonyan/.nuget/packages/",
-        "outputPath": "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/",
+        "outputPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jivanshmavonyan/.nuget/NuGet/NuGet.Config"

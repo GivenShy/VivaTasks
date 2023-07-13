@@ -1,0 +1,15 @@
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/Multithreading
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/Multithreading.deps.json
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/Multithreading.runtimeconfig.json
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/Multithreading.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/Multithreading.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.csproj.AssemblyReference.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.AssemblyInfoInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.AssemblyInfo.cs
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.csproj.CoreCompileInputs.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/refint/Multithreading.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.pdb
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.genruntimeconfig.cache
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/ref/Multithreading.dll
