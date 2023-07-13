@@ -13,3 +13,8 @@
 /Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.pdb
 /Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.genruntimeconfig.cache
 /Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/ref/Multithreading.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/System.Drawing.Common.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Debug/net6.0/Multithreading.csproj.CopyComplete

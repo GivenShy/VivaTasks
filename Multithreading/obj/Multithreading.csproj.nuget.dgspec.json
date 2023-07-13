@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multithreading.csproj": {}
+    "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj": {}
   },
   "projects": {
-    "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multithreading.csproj": {
+    "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multithreading.csproj",
+        "projectUniqueName": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj",
         "projectName": "Multithreading",
-        "projectPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/Multithreading.csproj",
+        "projectPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj",
         "packagesPath": "/Users/jivanshmavonyan/.nuget/packages/",
-        "outputPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multitthreading/obj/",
+        "outputPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jivanshmavonyan/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

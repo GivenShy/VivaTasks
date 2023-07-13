@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace Multithreading
 {
@@ -10,10 +12,24 @@ namespace Multithreading
         }
 
         public static void Main()
-        {
-            PrintFromFiles("/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/text.txt",
-                "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/t.txt");
+        {   //---Task1
+            //PrintFromFiles("/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/text.txt",
+            //    "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/t.txt");
+            //Console.ReadKey();
+            //string[] files = Directory.GetFiles("/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Pictures");
+            //foreach (string str in files)
+            //{
+            //    Console.WriteLine(str);
+            //}
+            //Image img = Image.FromFile(files[0]);
+
+
+            //var rectangle = new Rectangle(0, 0, 256, img.Height);
+            //var bit = new Bitmap(256, img.Height);
+            // does not supported on mac
+
             Console.ReadKey();
+
         }
 
         public static void PrintFromFiles(string path1, string path2)
