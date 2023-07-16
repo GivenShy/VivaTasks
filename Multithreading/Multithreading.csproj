@@ -8,12 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Pictures\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pictures\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
+
 </Project>

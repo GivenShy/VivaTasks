@@ -13,3 +13,6 @@
 /Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Release/net6.0/Multithreading.pdb
 /Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Release/net6.0/Multithreading.genruntimeconfig.cache
 /Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/Release/net6.0/ref/Multithreading.dll
+C:\Users\jivan\Source\Repos\GivenShy\VivaTasks\Multithreading\obj\Release\net6.0\Multithreading.dll
+C:\Users\jivan\Source\Repos\GivenShy\VivaTasks\Multithreading\obj\Release\net6.0\refint\Multithreading.dll
+C:\Users\jivan\Source\Repos\GivenShy\VivaTasks\Multithreading\obj\Release\net6.0\Multithreading.pdb

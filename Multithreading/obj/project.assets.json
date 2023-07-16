@@ -127,24 +127,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/jivanshmavonyan/.nuget/packages/": {}
+    "C:\\Users\\jivan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj",
+      "projectUniqueName": "C:\\Users\\jivan\\Source\\Repos\\GivenShy\\VivaTasks\\Multithreading\\Multithreading.csproj",
       "projectName": "Multithreading",
-      "projectPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj",
-      "packagesPath": "/Users/jivanshmavonyan/.nuget/packages/",
-      "outputPath": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/obj/",
+      "projectPath": "C:\\Users\\jivan\\Source\\Repos\\GivenShy\\VivaTasks\\Multithreading\\Multithreading.csproj",
+      "packagesPath": "C:\\Users\\jivan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jivan\\Source\\Repos\\GivenShy\\VivaTasks\\Multithreading\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jivanshmavonyan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -184,7 +186,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
