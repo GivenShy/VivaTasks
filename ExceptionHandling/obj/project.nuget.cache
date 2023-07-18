@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iLCKME0Mz1Ck5WZzTntADi1Bir+wcFvXqZqf1OMmwldlYipDBKZsQLr+ITO0dM3RSCjqND1R7X5r239vrDZEXQ==",
+  "dgSpecHash": "PP4mxa8XUPDOOHl9m81nb7+EfPROgbJ05r8Lo+MFnouSxoicOwg1xC1xO6TwosuLYXFYc39Dih2GGnxiHr4QlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jivan\\Source\\Repos\\GivenShy\\VivaTasks\\ExceptionHandling\\ExceptionHandling.csproj",
+  "projectFilePath": "/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/ExceptionHandling.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jivan\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\jivan\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+    "/Users/jivanshmavonyan/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "/Users/jivanshmavonyan/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7/Mzp/phtnOr88eJDoigCEikKGUxr/04JdGw5Q1SZ6GpgepoOijQ1KMawU6u6p4rQRm+zZwr2ToTy8PZ/lcfKw==",
+  "dgSpecHash": "WKD39kbdrTEMSxUC2ID+npRP6o020E/WOe/g8CJilz925fbUWrShxWGdBqTPePBEhk3Zn3aKW5yCWJ4jQsNmpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jivan\\Source\\Repos\\GivenShy\\VivaTasks\\Multithreading\\Multithreading.csproj",
+  "projectFilePath": "/Users/jivanshmavonyan/Desktop/Tasks/Multithreading/Multithreading.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jivan\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\jivan\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+    "/Users/jivanshmavonyan/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "/Users/jivanshmavonyan/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
