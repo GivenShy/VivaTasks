@@ -28,3 +28,8 @@
 /Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.pdb
 /Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.genruntimeconfig.cache
 /Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ref/ExceptionHandling.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/System.Drawing.Common.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/Users/jivanshmavonyan/Desktop/Tasks/ExceptionHandling/obj/Debug/net6.0/ExceptionHandling.csproj.CopyComplete

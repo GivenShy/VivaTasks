@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "Except
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreading", "Multithreading\Multithreading.csproj", "{0C0ED635-9996-428D-81C8-6E105193DD73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingTables", "CreatingTables\CreatingTables.csproj", "{793650E0-E82F-4310-BA31-CFB4873797C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0C0ED635-9996-428D-81C8-6E105193DD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C0ED635-9996-428D-81C8-6E105193DD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C0ED635-9996-428D-81C8-6E105193DD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793650E0-E82F-4310-BA31-CFB4873797C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793650E0-E82F-4310-BA31-CFB4873797C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793650E0-E82F-4310-BA31-CFB4873797C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793650E0-E82F-4310-BA31-CFB4873797C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
