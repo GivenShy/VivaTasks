@@ -4,6 +4,7 @@ using CreatingTables;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CreatingTables.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20230814121505_addedBirthdayInCustomer")]
+    partial class addedBirthdayInCustomer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,13 +57,7 @@ namespace CreatingTables.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AvarageCallTime")
-                        .HasColumnType("int");
-
                     b.Property<int>("CallDuration")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("EndTime")
@@ -70,8 +67,6 @@ namespace CreatingTables.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
 
                     b.ToTable("CallDetails");
                 });
@@ -136,85 +131,11 @@ namespace CreatingTables.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("Version")
-                        .IsConcurrencyToken()
-                        .IsRequired()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("rowversion");
-
-                    b.Property<int>("avarageTime")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasAlternateKey("Email");
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("CreatingTables.Models.CustomerOrder", b =>
-                {
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable((string)null);
-
-                    b.ToView("CutomerOrderView", (string)null);
-                });
-
-            modelBuilder.Entity("CreatingTables.Models.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("PeriodEnd")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2")
-                        .HasColumnName("PeriodEnd");
-
-                    b.Property<DateTime>("PeriodStart")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2")
-                        .HasColumnName("PeriodStart");
-
-                    b.Property<int>("Salary")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartedWork")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employees", (string)null);
-
-                    b.ToTable(tb => tb.IsTemporal(ttb =>
-                            {
-                                ttb.UseHistoryTable("EmployeesHistory");
-                                ttb
-                                    .HasPeriodStart("PeriodStart")
-                                    .HasColumnName("PeriodStart");
-                                ttb
-                                    .HasPeriodEnd("PeriodEnd")
-                                    .HasColumnName("PeriodEnd");
-                            }));
                 });
 
             modelBuilder.Entity("CreatingTables.Models.FeaturedProduct", b =>
@@ -376,23 +297,6 @@ namespace CreatingTables.Migrations
                     b.ToTable("ProductDetails");
                 });
 
-            modelBuilder.Entity("MyOutput", b =>
-                {
-                    b.Property<int>("Result")
-                        .HasColumnType("int");
-
-                    b.ToTable("MyOutput");
-                });
-
-            modelBuilder.Entity("CreatingTables.Models.CallDetail", b =>
-                {
-                    b.HasOne("CreatingTables.Models.Customer", "Customer")
-                        .WithMany("callDetails")
-                        .HasForeignKey("CustomerId");
-
-                    b.Navigation("Customer");
-                });
-
             modelBuilder.Entity("CreatingTables.Models.Order", b =>
                 {
                     b.HasOne("CreatingTables.Models.Customer", "Customer")
@@ -426,8 +330,6 @@ namespace CreatingTables.Migrations
             modelBuilder.Entity("CreatingTables.Models.Customer", b =>
                 {
                     b.Navigation("Orders");
-
-                    b.Navigation("callDetails");
                 });
 
             modelBuilder.Entity("CreatingTables.Models.NewCustomer", b =>

@@ -4,6 +4,7 @@ using CreatingTables;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CreatingTables.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20230810130628_a")]
+    partial class a
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,59 +49,6 @@ namespace CreatingTables.Migrations
                     b.ToTable("BestSellerProducts");
                 });
 
-            modelBuilder.Entity("CreatingTables.Models.CallDetail", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AvarageCallTime")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CallDuration")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("EndTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("StartTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("CallDetails");
-                });
-
-            modelBuilder.Entity("CreatingTables.Models.CancelledOrder", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("TotalAmount")
-                        .HasColumnType("money");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CancelledOrders");
-                });
-
             modelBuilder.Entity("CreatingTables.Models.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -111,9 +61,6 @@ namespace CreatingTables.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Birthday")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("ContactNumber")
                         .HasColumnType("int");
 
@@ -125,9 +72,6 @@ namespace CreatingTables.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -135,86 +79,12 @@ namespace CreatingTables.Migrations
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("Version")
-                        .IsConcurrencyToken()
-                        .IsRequired()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("rowversion");
-
-                    b.Property<int>("avarageTime")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasAlternateKey("Email");
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("CreatingTables.Models.CustomerOrder", b =>
-                {
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.ToTable((string)null);
-
-                    b.ToView("CutomerOrderView", (string)null);
-                });
-
-            modelBuilder.Entity("CreatingTables.Models.Employee", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("PeriodEnd")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2")
-                        .HasColumnName("PeriodEnd");
-
-                    b.Property<DateTime>("PeriodStart")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2")
-                        .HasColumnName("PeriodStart");
-
-                    b.Property<int>("Salary")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartedWork")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employees", (string)null);
-
-                    b.ToTable(tb => tb.IsTemporal(ttb =>
-                            {
-                                ttb.UseHistoryTable("EmployeesHistory");
-                                ttb
-                                    .HasPeriodStart("PeriodStart")
-                                    .HasColumnName("PeriodStart");
-                                ttb
-                                    .HasPeriodEnd("PeriodEnd")
-                                    .HasColumnName("PeriodEnd");
-                            }));
                 });
 
             modelBuilder.Entity("CreatingTables.Models.FeaturedProduct", b =>
@@ -296,9 +166,6 @@ namespace CreatingTables.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -313,8 +180,6 @@ namespace CreatingTables.Migrations
                     b.HasIndex("NewCustomerId");
 
                     b.HasIndex("OrderDate");
-
-                    b.HasIndex("ProductId");
 
                     b.HasIndex("Status", "CustomerId");
 
@@ -376,21 +241,19 @@ namespace CreatingTables.Migrations
                     b.ToTable("ProductDetails");
                 });
 
-            modelBuilder.Entity("MyOutput", b =>
+            modelBuilder.Entity("OrderProduct", b =>
                 {
-                    b.Property<int>("Result")
+                    b.Property<int>("OrdersId")
                         .HasColumnType("int");
 
-                    b.ToTable("MyOutput");
-                });
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
 
-            modelBuilder.Entity("CreatingTables.Models.CallDetail", b =>
-                {
-                    b.HasOne("CreatingTables.Models.Customer", "Customer")
-                        .WithMany("callDetails")
-                        .HasForeignKey("CustomerId");
+                    b.HasKey("OrdersId", "ProductsId");
 
-                    b.Navigation("Customer");
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("OrderProduct");
                 });
 
             modelBuilder.Entity("CreatingTables.Models.Order", b =>
@@ -404,10 +267,6 @@ namespace CreatingTables.Migrations
                     b.HasOne("CreatingTables.Models.NewCustomer", null)
                         .WithMany("Orders")
                         .HasForeignKey("NewCustomerId");
-
-                    b.HasOne("CreatingTables.Models.Product", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("ProductId");
 
                     b.Navigation("Customer");
                 });
@@ -423,11 +282,24 @@ namespace CreatingTables.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.HasOne("CreatingTables.Models.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrdersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CreatingTables.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CreatingTables.Models.Customer", b =>
                 {
                     b.Navigation("Orders");
-
-                    b.Navigation("callDetails");
                 });
 
             modelBuilder.Entity("CreatingTables.Models.NewCustomer", b =>
@@ -437,8 +309,6 @@ namespace CreatingTables.Migrations
 
             modelBuilder.Entity("CreatingTables.Models.Product", b =>
                 {
-                    b.Navigation("Orders");
-
                     b.Navigation("ProductDetails")
                         .IsRequired();
                 });

@@ -1,12 +1,12 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace CreatingTables.Models
 {
-    [Table("Customers")]
-    public class Customer
+    public class NewCustomer
     {
+        public NewCustomer()
+        {
+
+        }
 
         public int Id { get; set; }
 
@@ -22,18 +22,7 @@ namespace CreatingTables.Models
 
         public string Country { get; set; }
 
-        public DateTime Birthday { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public ICollection<CallDetail> callDetails { get; set; }
-
-        public int avarageTime { get; set; }
-
         public ICollection<Order> Orders { get; set; }
-
-        [Timestamp]
-        public byte[] Version { get; set; }
 
         public override string ToString()
         {

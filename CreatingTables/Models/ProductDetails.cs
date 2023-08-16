@@ -1,6 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace CreatingTables.Models
 {
+    [Table("ProductDetails")]
     public class ProductDetails
     {
         public ProductDetails()
@@ -9,6 +12,7 @@ namespace CreatingTables.Models
 
         public int Id { get; set; }
 
+        [Column("Description")]
         public string Description { get; set; }
 
         public int ProductId { get; set; }

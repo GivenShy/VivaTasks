@@ -20,8 +20,21 @@ namespace CreatingTables.Models
 
         public int StockQuantity { get; set; }
 
+        public string Category { get; set; }
+
         public ProductDetails ProductDetails { get; set; }
+
+        public List<Order> Orders { get; set; }
+
+
+        public override string? ToString()
+        {
+            return Id + " " + ProductName + " " + Price + " " + StockQuantity;
+        }
 
     }
 }
+
+
+
 
